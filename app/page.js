@@ -1,10 +1,19 @@
 // app/TodoApp.js
 "use client"; // Required since you're using useState
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const TodoApp = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]);
   const [task, setTask] = useState("");
   const [desc, setDesc] = useState("");
   const [mainTask, setMainTask] = useState([]);
@@ -31,6 +40,13 @@ const TodoApp = () => {
           <div className="left">
             <h3>{t.task}</h3>
             <p>{t.desc}</p>
+<div className="toggle-container">
+        <label className="switch">
+          <input type="checkbox" checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+          <span className="slider round"></span>
+        </label>
+        <span>{darkMode ? "Dark Mode" : "Light Mode"}</span>
+      </div>
           </div>
           <button onClick={() => deleteHandler(i)}>Delete</button>
         </li>
