@@ -3,17 +3,22 @@
 
 import { useState } from "react";
 import "./App.css";
+import { sendEmail, logEmail, optIn, optOut } from './emailService';
 
 const TodoApp = () => {
   const [task, setTask] = useState("");
   const [desc, setDesc] = useState("");
   const [mainTask, setMainTask] = useState([]);
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     setMainTask([...mainTask, { task, desc }]);
     setTask("");
     setDesc("");
+    
+    // Send email notification
+    await sendEmail('user@example.com', 'New Task Added', `<h1>${task}</h1><p>${desc}</p>`);
+    logEmail('user@example.com', 'New Task Added');
   };
 
   const deleteHandler = (i) => {
