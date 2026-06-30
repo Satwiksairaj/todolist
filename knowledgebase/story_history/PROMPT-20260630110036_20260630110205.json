@@ -1,0 +1,61 @@
+{
+  "story_id": "PROMPT-20260630110036",
+  "feature": "Analyze and Fix Todo Application Issues",
+  "affected_modules": [
+    "app",
+    "Core",
+    "API",
+    "RepositoryMemory"
+  ],
+  "files_modified": [
+    "agent_index/chunks.json",
+    "agent_index/hashes.json"
+  ],
+  "files_created": [],
+  "architecture_decisions": [
+    "Reuse established architecture decisions from knowledge base",
+    "architecture_style: layered",
+    "integration: Next.js"
+  ],
+  "coding_patterns": [
+    "Functional components",
+    "useState for state management"
+  ],
+  "testing_patterns": [
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria"
+  ],
+  "security_patterns": [
+    "Security validation passed for changed files"
+  ],
+  "build_commands": [
+    "npm run lint",
+    "npm run build"
+  ],
+  "deployment_considerations": [
+    "build_system: npm",
+    "package_manager: npm",
+    "framework: Next.js",
+    "language: JavaScript"
+  ],
+  "common_fixes": [
+    "Testing skipped: No test files found in JavaScript project",
+    "Review summary: Review passed with scope/compliance checks and repository-memory validation"
+  ],
+  "lessons_learned": [
+    "Risk level assessed as high",
+    "Confidence score: 0.45",
+    "Prioritize changes in impacted modules only"
+  ],
+  "patterns": [
+    "Functional components",
+    "useState for state management",
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria",
+    "Security validation passed for changed files"
+  ],
+  "commands": [
+    "npm run lint",
+    "npm run build"
+  ]
+}
