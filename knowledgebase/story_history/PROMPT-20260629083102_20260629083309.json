@@ -1,0 +1,51 @@
+{
+  "story_id": "PROMPT-20260629083102",
+  "feature": "Implement JWT Authentication",
+  "affected_modules": [
+    "Core",
+    "API",
+    "Authentication",
+    "RepositoryMemory"
+  ],
+  "files_modified": [
+    "authController.js",
+    "middleware/authMiddleware.js",
+    "routes/protectedRoutes.js"
+  ],
+  "files_created": [],
+  "architecture_decisions": [
+    "Reuse established architecture decisions from knowledge base",
+    "architecture_style: layered",
+    "integration: unknown"
+  ],
+  "coding_patterns": [],
+  "testing_patterns": [
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria"
+  ],
+  "security_patterns": [
+    "Security validation passed for changed files"
+  ],
+  "build_commands": [],
+  "deployment_considerations": [
+    "build_system: unknown",
+    "package_manager: unknown",
+    "framework: unknown",
+    "language: unknown"
+  ],
+  "common_fixes": [
+    "Testing skipped: No test framework detected for language='unknown'",
+    "Review summary: Review passed with scope/compliance checks and repository-memory validation"
+  ],
+  "lessons_learned": [
+    "Risk level assessed as low",
+    "Confidence score: 0.8",
+    "Prioritize changes in impacted modules only"
+  ],
+  "patterns": [
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria",
+    "Security validation passed for changed files"
+  ],
+  "commands": []
+}

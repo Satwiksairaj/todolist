@@ -1,0 +1,63 @@
+{
+  "story_id": "PROMPT-20260630103423",
+  "feature": "Sales Stock Prediction Dashboard",
+  "affected_modules": [
+    "Core",
+    "API",
+    "RepositoryMemory"
+  ],
+  "files_modified": [
+    "dashboard.py",
+    "ml_model.py",
+    "visualization.py",
+    "filters.py",
+    "tests/test_dashboard.py",
+    "tests/test_filters.py",
+    "tests/test_visualization.py",
+    "models.py",
+    "ui.py",
+    "tests/test_predictions.py",
+    "model.py",
+    "requirements.txt"
+  ],
+  "files_created": [],
+  "architecture_decisions": [
+    "Reuse established architecture decisions from knowledge base",
+    "architecture_style: layered",
+    "integration: unknown"
+  ],
+  "coding_patterns": [],
+  "testing_patterns": [
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria"
+  ],
+  "security_patterns": [
+    "Security validation passed for changed files"
+  ],
+  "build_commands": [
+    "\"D:\\autonomous-dev-agent\\.venv\\Scripts\\python.exe\" -m pytest tests/test_dashboard.py tests/test_filters.py tests/test_visualization.py tests/test_predictions.py -v --tb=short -x --rootdir=. --confcutdir=. -p no:flask"
+  ],
+  "deployment_considerations": [
+    "build_system: unknown",
+    "package_manager: unknown",
+    "framework: unknown",
+    "language: unknown"
+  ],
+  "common_fixes": [
+    "Tests initially failed and required remediation",
+    "Review summary: Review passed with scope/compliance checks and repository-memory validation"
+  ],
+  "lessons_learned": [
+    "Risk level assessed as low",
+    "Confidence score: 0.8",
+    "Prioritize changes in impacted modules only"
+  ],
+  "patterns": [
+    "Run project-native tests for impacted modules (framework=unknown)",
+    "Add or adjust tests that cover modified acceptance criteria",
+    "Security validation passed for changed files"
+  ],
+  "commands": [
+    "\"D:\\autonomous-dev-agent\\.venv\\Scripts\\python.exe\" -m pytest tests/test_dashboard.py tests/test_filters.py tests/test_visualization.py tests/test_predictions.py -v --tb=short -x --rootdir=. --confcutdir=. -p no:flask"
+  ]
+}
